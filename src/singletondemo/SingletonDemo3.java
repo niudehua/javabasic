@@ -5,6 +5,7 @@ package singletondemo;
  * @date: 2019/8/6
  * @time: 11:16 AM
  * @email 657563945@qq.com
+ *
  */
 public class SingletonDemo3 {
     public static void main(String[] args) {
