@@ -8,7 +8,10 @@ package variable;
  * Java 变量类型
  */
 public class Variable {
-    // 类变量
+
+    /**
+     * 类变量
+     */
     static int allClicks = 0;
 
     /**
@@ -21,7 +24,15 @@ public class Variable {
          * 局部变量
          */
         int i = 0;
+        System.out.println(i);
 
     }
 
+    public static void main(String[] args) {
+        Variable variable = new Variable();
+        System.out.println(variable.string);
+        System.out.println(allClicks);
+        variable.method();
+
+    }
 }

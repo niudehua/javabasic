@@ -1,4 +1,4 @@
-package classandobject;
+package classandobject_2;
 
 /**
  * @author:deng

@@ -1,4 +1,4 @@
-package helloword_1;
+package primitivetype_3;
 
 /**
  * @author:deng

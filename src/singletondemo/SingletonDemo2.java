@@ -22,12 +22,23 @@ public class SingletonDemo2 {
 
 
 class Order {
+    /**
+     * volatile声明作用即是内存变量共享的作用
+     */
+    private static volatile Order instance = null;
+
+    /**
+     * 构造私有化
+     */
     private Order() {
 
     }
 
-    private static Order instance = null;
-
+    /**
+     * 提供公有的获取方法
+     *
+     * @return order
+     */
     public static Order getInstance() {
         if (instance == null) {
             //解决线程安全问题

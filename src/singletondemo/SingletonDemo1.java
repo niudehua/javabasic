@@ -21,12 +21,22 @@ public class SingletonDemo1 {
 
 
 class Bank {
+    /**
+     * 类装载的时候已经实例化
+     */
+    private static final Bank instance = new Bank();
 
+    /**
+     * 构造私有化
+     */
     private Bank() {
     }
 
-    private static Bank instance = new Bank();
-
+    /**
+     * 提供静态的公有获取方法
+     *
+     * @return bank
+     */
     public static Bank getInstance() {
         return instance;
     }

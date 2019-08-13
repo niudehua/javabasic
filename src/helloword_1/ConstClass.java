@@ -7,4 +7,6 @@ package helloword_1;
  * @email 657563945@qq.com
  */
 public class ConstClass {
+    private static final String Success = "成功";
+    private static final String Fail = "失败";
 }
