@@ -1,6 +1,5 @@
 package conllectionsandarrays;
 
-import org.checkerframework.checker.units.qual.C;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
