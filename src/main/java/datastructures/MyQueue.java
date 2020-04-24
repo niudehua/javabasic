@@ -5,7 +5,7 @@ package datastructures;
  * @author:deng
  * @date: 2020/4/23
  * @time: 4:20 下午
- * @desc：
+ * @desc： 数据结构-队列
  */
 public class MyQueue {
     /**

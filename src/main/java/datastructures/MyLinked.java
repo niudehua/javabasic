@@ -4,7 +4,7 @@ package datastructures;
  * @author:deng
  * @date: 2020/4/23
  * @time: 2:42 下午
- * @desc：
+ * @desc： 数据结构-链表
  */
 public class MyLinked {
     /**
