@@ -1,0 +1,11 @@
+{
+  "interruptible": "true",
+  "content": "好的同学，您的情况已了解了，稍后我们会安排资深顾问老师给您做更详细的留学评估以及升学指导，请留意电话接听",
+  "procedures": [
+    {
+      "name": "summarize",
+      "params":"{\"category\":{'category':'顺顺留学'},\"name\":\"顺顺留学-问题5\", \"content\":\"${问题五触发（结束）.isHas}-完整\"}"
+    }
+  ],
+  "action": "Hangup"
+}
