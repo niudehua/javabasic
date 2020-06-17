@@ -28,7 +28,7 @@ public class EqualsTest {
         // 推荐使用 java.util.Objects equals
         if (!Objects.equals(str, "SnailClimb")) {
             System.out.println("推荐使用 java.util.Objects equals");
-        }else {
+        } else {
             System.out.println("推荐使用 java.util.Objects equals...");
         }
     }

@@ -1,4 +1,4 @@
-package cn.niudehua.aike.utils.convertData;
+package cn.niudehua.aike.util.convertData;
 /**
  * 转换txt文本的格式,给语言模型训练的语料使用
  */
@@ -47,6 +47,7 @@ public class CopyTxt {
 
     /**
      * 获取文件夹下所有文件名
+     *
      * @param path
      * @return
      */

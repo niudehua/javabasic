@@ -12,8 +12,8 @@ public class MultiTable {
     }
 
     private static void 乘法口诀() {
-        for (int i = 1; i <=9 ; i++) {
-            for (int j = i; j >0; j--) {
+        for (int i = 1; i <= 9; i++) {
+            for (int j = i; j > 0; j--) {
                 System.out.print(j + "*" + i + "=" + (j * i) + "\t");
             }
             System.out.println();

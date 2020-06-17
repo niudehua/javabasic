@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @time: 6:04 下午
  * @email 657563945@qq.com
  */
-public class BuyApp  {
+public class BuyApp {
     public static void main(String[] args) {
         int totalMoney;
         int[] wantBuyPrices;

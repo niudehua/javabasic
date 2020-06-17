@@ -3,7 +3,6 @@ package basicdoubt;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.stream.Collectors;
@@ -16,25 +15,25 @@ import java.util.stream.Collectors;
  */
 public class ArraysTest3 {
     public static void main(String[] args) {
-        String [] s= new String[]{
+        String[] s = new String[]{
                 "dog", "lazy", "a", "over", "jumps", "fox", "brown", "quick", "A"
         };
         List<String> list = Arrays.asList(s);
         System.out.println(list);
         Collections.reverse(list);
 //        s = (String[]) list.toArray();
-        s= list.toArray(new String[0]);//没有指定类型的话会报错
+        s = list.toArray(new String[0]);//没有指定类型的话会报错
         for (String s1 : s) {
-            System.out.print(s1+"\t");
+            System.out.print(s1 + "\t");
         }
         System.out.println("");
 
 
         List<String> userNames = new ArrayList<String>();
-         userNames.add("Hollis");
-         userNames.add("hollis");
-         userNames.add("HollisChuang");
-         userNames.add("H");
+        userNames.add("Hollis");
+        userNames.add("hollis");
+        userNames.add("HollisChuang");
+        userNames.add("H");
 
         //        for (String userName : userNames) {  // java.util.ConcurrentModificationException
 //            if (userName.equals("Hollis")) {
@@ -42,13 +41,12 @@ public class ArraysTest3 {
 //            }
 //        }
 
-            //直接使用普通for循环进行操作
+        //直接使用普通for循环进行操作
 //        for (int i = 0; i < userNames.size(); i++) {
 //            if (userNames.get(i).equals("Hollis")) {
 //                userNames.remove(i);
 //            }
 //        }
-
 
 
         //直接使用Iterator进行操作
@@ -60,9 +58,9 @@ public class ArraysTest3 {
 //        }
 
         //使用Java 8中提供的filter过滤
-        userNames = userNames.stream().filter(userName ->!userName.equals("Hollis")).collect(Collectors.toList());
+        userNames = userNames.stream().filter(userName -> !userName.equals("Hollis")).collect(Collectors.toList());
 
-        System.out.println("userNames:"+userNames);
+        System.out.println("userNames:" + userNames);
 
         //直接使用fail-safe的集合类
         ConcurrentLinkedDeque<String> userNames1 = new ConcurrentLinkedDeque<>();
@@ -76,7 +74,7 @@ public class ArraysTest3 {
             }
 
         }
-        System.out.println("userNames1:"+userNames1);
+        System.out.println("userNames1:" + userNames1);
 
     }
 }

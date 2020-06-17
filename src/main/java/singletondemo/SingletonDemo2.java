@@ -26,11 +26,13 @@ class Order {
      * volatile声明作用即是内存变量共享的作用
      */
     private static volatile Order instance = null;
+
     /**
      * 构造私有化
      */
     private Order() {
     }
+
     /**
      * 提供公有的获取方法
      *

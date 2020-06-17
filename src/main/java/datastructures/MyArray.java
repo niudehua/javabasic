@@ -4,7 +4,7 @@ package datastructures;
  * @author: deng
  * @date: 2020/4/23
  * @time: 1:53 下午
- * @desc：  数据结构-数组
+ * @desc： 数据结构-数组
  */
 public class MyArray {
     private int size;
@@ -89,9 +89,9 @@ public class MyArray {
         myArray.insert(22, 5);
         myArray.output();
         int delete = myArray.delete(3);
-        System.out.println(delete+"------");
+        System.out.println(delete + "------");
         myArray.output();
-        myArray.insert(33,3);
+        myArray.insert(33, 3);
         myArray.output();
     }
 }

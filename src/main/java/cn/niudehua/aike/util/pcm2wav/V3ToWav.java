@@ -1,4 +1,4 @@
-package cn.niudehua.aike.utils.pcm2wav;
+package cn.niudehua.aike.util.pcm2wav;
 
 
 import java.io.File;
@@ -7,12 +7,13 @@ import java.io.FileOutputStream;
 
 public class V3ToWav {
     private static V3ToWav v3ToWav;
-    private V3ToWav(){
+
+    private V3ToWav() {
 
     }
 
-    public static V3ToWav getInstance(){
-        if(v3ToWav == null){
+    public static V3ToWav getInstance() {
+        if (v3ToWav == null) {
             v3ToWav = new V3ToWav();
         }
         return v3ToWav;
@@ -31,15 +32,11 @@ public class V3ToWav {
     private static byte out_val;
 
     /**
-     *
      * @param inFile
      * @param outFile
-     * @param voxFormat
-     *            格式 取值范围:VF_ADPCM = 1, VF_MULAW = 2, VF_ALAW = 3
-     * @param voxRate
-     *            采样率 取值范围：VR_6K = 6000, VR_8K = 8000
-     * @param bit_rate
-     *            位数 取值范围：VB_8 = 1, VB_16 = 2
+     * @param voxFormat 格式 取值范围:VF_ADPCM = 1, VF_MULAW = 2, VF_ALAW = 3
+     * @param voxRate   采样率 取值范围：VR_6K = 6000, VR_8K = 8000
+     * @param bit_rate  位数 取值范围：VB_8 = 1, VB_16 = 2
      * @return
      */
 
@@ -245,24 +242,21 @@ public class V3ToWav {
     }
 
     /**
-     *
      * @param sample
      * @param Sn
-     * @param ss
-     *            引用变量
-     * @param SSindex
-     *            引用变量
+     * @param ss      引用变量
+     * @param SSindex 引用变量
      * @return
      */
     private static Object[] decode(byte sample, short Sn, int SS, int SSindex) {
         Object[] retArr = new Object[3];
-        int[] SSadjust = new int[] { -1, -1, -1, -1, 2, 4, 6, 8 };
+        int[] SSadjust = new int[]{-1, -1, -1, -1, 2, 4, 6, 8};
         // Calculated stepsizes per Dialogic Application Note 1366
-        int[] SStable = new int[] { 0, 16, 17, 19, 21, 23, 25, 28, 31, 34, 37,
+        int[] SStable = new int[]{0, 16, 17, 19, 21, 23, 25, 28, 31, 34, 37,
                 41, 45, 50, 55, 60, 66, 73, 80, 88, 97, 107, 118, 130, 143,
                 157, 173, 190, 209, 230, 253, 279, 307, 337, 371, 408, 449,
                 494, 544, 598, 658, 724, 796, 876, 963, 1060, 1166, 1282, 1411,
-                1552 };
+                1552};
         int Mn = 0; // calculate the linear adjustment
         if ((sample & 0x4) != 0) {
             Mn = SS;
@@ -331,12 +325,9 @@ public class V3ToWav {
      * java中没有有符号类型，所以将超过0x7FFF的short类型保存为int类型。本方法提供了将有符号short类型
      * 转换保存在字节数组中，占据两个字节
      *
-     * @param val
-     *            int
-     * @param array
-     *            byte[]
-     * @param offset
-     *            int
+     * @param val    int
+     * @param array  byte[]
+     * @param offset int
      */
     private static void toShortBinary(int val, byte[] array, int offset) {
         array[offset] = (byte) (val & 0xff);
@@ -345,7 +336,7 @@ public class V3ToWav {
 
     public static void main(String[] args) {
 
-        String inFile  = "C:\\Users\\Deng\\Desktop\\v3file\\aike.V3";
+        String inFile = "C:\\Users\\Deng\\Desktop\\v3file\\aike.V3";
         String outFile = "C:\\Users\\Deng\\Desktop\\wavfile\\aike.wav";
 
         try {

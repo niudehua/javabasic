@@ -72,7 +72,7 @@ public class CollectionsTest {
         students.add(a);
         students.add(b);
         students.add(c);
-        System.out.println("原始对象数组:"+students);
+        System.out.println("原始对象数组:" + students);
         // 按生日排序 降序
         Collections.sort(students, (o1, o2) -> o2.birthday.compareTo(o1.birthday));
         System.out.println("按生日降序:" + students);

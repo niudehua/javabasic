@@ -1,4 +1,4 @@
-package cn.niudehua.aike.utils.pcm2wav;
+package cn.niudehua.aike.util.pcm2wav;
 
 
 import java.io.ByteArrayOutputStream;
@@ -14,11 +14,13 @@ import java.util.regex.Pattern;
 public class PcmTowav {
     public static void pcmtowav(String path) throws IOException {
         class WaveHeader {
-            WaveHeader(){}
-            public final char fileID[] = { 'R', 'I', 'F', 'F' };
+            WaveHeader() {
+            }
+
+            public final char fileID[] = {'R', 'I', 'F', 'F'};
             public int fileLength;
-            public char wavTag[] = { 'W', 'A', 'V', 'E' };
-            public char FmtHdrID[] = { 'f', 'm', 't', ' ' };
+            public char wavTag[] = {'W', 'A', 'V', 'E'};
+            public char FmtHdrID[] = {'f', 'm', 't', ' '};
             public int FmtHdrLeth;
             public short FormatTag;
             public short Channels;
@@ -26,7 +28,7 @@ public class PcmTowav {
             public int AvgBytesPerSec;
             public short BlockAlign;
             public short BitsPerSample;
-            public char DataHdrID[] = { 'd', 'a', 't', 'a' };
+            public char DataHdrID[] = {'d', 'a', 't', 'a'};
             public int DataHdrLeth;
 
             public byte[] getHeader() throws IOException {
@@ -80,11 +82,11 @@ public class PcmTowav {
             System.out.println("文件路径格式错误!");
         }
         System.out.println(m.group(1));
-        String name=m.group(1);
+        String name = m.group(1);
 
         String src = path;
         FileInputStream fis = new FileInputStream(src);
-        FileOutputStream fos = new FileOutputStream("/Users/deng/Desktop/pcmTowav/"+name+".wav");
+        FileOutputStream fos = new FileOutputStream("/Users/deng/Desktop/pcmTowav/" + name + ".wav");
 
         //计算长度
         int PCMSize = 0;
@@ -106,7 +108,7 @@ public class PcmTowav {
         header.Channels = 1;
         header.FormatTag = 0x0001;
         header.SamplesPerSec = 8000;
-        header.BlockAlign = (short)(header.Channels * header.BitsPerSample / 8);
+        header.BlockAlign = (short) (header.Channels * header.BitsPerSample / 8);
         header.AvgBytesPerSec = header.BlockAlign * header.SamplesPerSec;
         header.DataHdrLeth = PCMSize;
 
@@ -126,6 +128,7 @@ public class PcmTowav {
         fos.close();
         System.out.println("Convert OK!");
     }
+
     public static List<String> getAllFile(String directoryPath, boolean isAddDirectory) {
         List<String> list = new ArrayList<String>();
         File baseFile = new File(directoryPath);
@@ -135,10 +138,10 @@ public class PcmTowav {
         File[] files = baseFile.listFiles();
         for (File file : files) {
             if (file.isDirectory()) {
-                if(isAddDirectory){
+                if (isAddDirectory) {
                     list.add(file.getAbsolutePath());
                 }
-                list.addAll(getAllFile(file.getAbsolutePath(),isAddDirectory));
+                list.addAll(getAllFile(file.getAbsolutePath(), isAddDirectory));
             } else {
                 list.add(file.getAbsolutePath());
             }
@@ -150,10 +153,10 @@ public class PcmTowav {
 
         String path = "/Users/deng/Desktop/pcmTowav";
 
-        List<String> pathList=getAllFile(path,false);
+        List<String> pathList = getAllFile(path, false);
 
 
-        for(String src :pathList) {
+        for (String src : pathList) {
             pcmtowav(src);
         }
 

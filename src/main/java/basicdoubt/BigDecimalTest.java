@@ -33,7 +33,7 @@ public class BigDecimalTest {
 
         //BigDecimal 保留几位小数 通过 setScale方法设置保留几位小数以及保留规则。
         BigDecimal p = new BigDecimal("1.255433");
-        BigDecimal q = p.setScale(3,BigDecimal.ROUND_HALF_DOWN);
+        BigDecimal q = p.setScale(3, BigDecimal.ROUND_HALF_DOWN);
         System.out.println(q);// 1.255
 
         // 为了防止精度丢失，推荐使用它的 BigDecimal(String)构造方法或者valueOf方法来创建对象

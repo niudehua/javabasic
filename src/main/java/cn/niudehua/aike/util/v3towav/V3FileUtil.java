@@ -1,4 +1,4 @@
-package cn.niudehua.aike.utils.v3towav;
+package cn.niudehua.aike.util.v3towav;
 
 /**
  * 将V3音频格式转换成wav格式

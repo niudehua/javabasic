@@ -43,7 +43,7 @@ public class ArraysTest {
 
 
         // 使用包装类型数组就可以解决这个问题
-        Integer[] myArray1 = { 1, 2, 3 };
+        Integer[] myArray1 = {1, 2, 3};
         List myList3 = Arrays.asList(myArray1);
         System.out.println(myList3.size()); // 3
         System.out.println(myList3.get(0)); // 1
