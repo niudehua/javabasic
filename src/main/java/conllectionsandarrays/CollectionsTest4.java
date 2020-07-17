@@ -10,7 +10,7 @@ import java.util.List;
  * @time: 16:27
  * @desc: Collections 工具类常用方法 同步控制
  */
-public class CollectionsTest3 {
+public class CollectionsTest4 {
     public static void main(String[] args) {
         ArrayList<Integer> arrayList = new ArrayList<Integer>();
         arrayList.add(-1);

@@ -8,17 +8,17 @@ package valuepassing;
  */
 public class ValuePassing2 {
     //基础数据类型
-//    public static void main(String[] args) {
-//        ValuePassing2 pt = new ValuePassing2();
-//        int j = 10;
-//        pt.pass(10);
-//        System.out.println("print in main , j is " + j);
-//    }
-//
-//    public void pass(int j) {
-//        j = 20;
-//        System.out.println("print in pass , j is " + j);
-//    }
+    public static void main(String[] args) {
+        ValuePassing2 pt = new ValuePassing2();
+        int j = 10;
+        pt.pass(j);
+        System.out.println("print in main , j is " + j);
+    }
+
+    public void pass(int j) {
+        j = j * 2;
+        System.out.println("print in pass , j is " + j);
+    }
     //String 类型 这里其实是重新创建了一个String对象去替换 传递过来的参数
 //    public static void main(String[] args) {
 //        ValuePassing2 pt = new ValuePassing2();
@@ -50,19 +50,19 @@ public class ValuePassing2 {
 //    }
 
     // 正确示例：直接将user变成null,user是不是没变？
-    public static void main(String[] args) {
-        ValuePassing2 pt = new ValuePassing2();
-        User hollis = new User();
-        hollis.setName("Hollis");
-        hollis.setGender("Male");
-        pt.pass(hollis);
-        System.out.println("print in main , user is " + hollis);
-    }
-
-    public void pass(User user) {
-        user = null;
-        System.out.println("print in pass , user is " + user);
-    }
+//    public static void main(String[] args) {
+//        ValuePassing2 pt = new ValuePassing2();
+//        User hollis = new User();
+//        hollis.setName("Hollis");
+//        hollis.setGender("Male");
+//        pt.pass(hollis);
+//        System.out.println("print in main , user is " + hollis);
+//    }
+//
+//    public void pass(User user) {
+//        user = null;
+//        System.out.println("print in pass , user is " + user);
+//    }
 
     /**
      * 对象
