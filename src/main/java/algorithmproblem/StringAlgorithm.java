@@ -7,7 +7,7 @@ package algorithmproblem;
  * 输入格式：输入数目不定的多对字符串，每行两个，以空格分开
  * 样例：myfun("munameistom","henameisjack") 返回值：max match chars is "nameis"
  */
-public class Main {
+public class StringAlgorithm {
     public static String myfun(String str1, String str2) {
         boolean b1;
         boolean b2 = false;
