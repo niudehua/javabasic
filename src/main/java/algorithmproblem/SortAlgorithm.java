@@ -1,5 +1,7 @@
 package algorithmproblem;
 
+import java.text.MessageFormat;
+
 /**
  * @author: deng
  * @datetime: 2020/7/9 10:55 上午
@@ -10,15 +12,14 @@ public class SortAlgorithm {
     /**
      * 按年龄排序
      *
-     * @param ages
+     * @param ages 年龄数组
      */
     public static void sort(int[] ages) {
         int oldestAge = 100;
         int[] timesOfAges = new int[oldestAge];
 
-        int len = ages.length;
-        for (int i = 0; i < len; i++) {
-            timesOfAges[ages[i]]++;
+        for (int value : ages) {
+            timesOfAges[value]++;
         }
         //排序
         int index = 0;
@@ -39,7 +40,7 @@ public class SortAlgorithm {
      * 斐波那契数列
      * 0，1，1，2，3，5，8，13。。。。求第N个数
      *
-     * @param n
+     * @param n 求第n个数
      */
     public static void fibonacciSequence(int n) {
         int num1 = 0;
@@ -51,7 +52,7 @@ public class SortAlgorithm {
             num1 = num2;
             num2 = numn;
         }
-        System.out.println(n + "个数的结果为：" + numn);
+        System.out.println(MessageFormat.format("第{0}个数的结果为:{1}", n, numn));
     }
 
 

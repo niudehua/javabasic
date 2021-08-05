@@ -28,5 +28,6 @@ public class TypeOfPackage {
         //当数值在-128 ~127时，会将创建的 Integer 对象缓存起来，当下次再出现该数值时，直接从缓存中取出对应的Integer对象，而超过了这个大小指就会是比较两个不同的地址值
         System.out.println(m == n); //false
         System.out.println(m.equals(n));//true
+
     }
 }

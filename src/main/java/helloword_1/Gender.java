@@ -19,7 +19,7 @@ public enum Gender {
         this.gender = gender;
     }
 
-    private Integer gender;
+    private final Integer gender;
 
     public Integer getGender() {
         return gender;
